@@ -14,7 +14,7 @@ tessdata_dir_config = '--tessdata-dir "C:\\Program Files (x86)\\Tesseract-OCR\\t
 option = webdriver.ChromeOptions()
 #option.add_argument('--headless')
 browser = webdriver.Chrome(chrome_options=option)          #set chrome interface
-download = "C:\\Users\\万水千山\\Downloads\\validateCodeAction.jpg"
+download = "C:\\Users\\Administrator\\Downloads\\validateCodeAction.jpg"   #Administrator为你的用户名
 
 def get_html(url):
     if(os.path.isfile(download)):
@@ -53,9 +53,9 @@ def click(text,ID, passwords):
     action.click(click_).perform()
 
 def main():
-    url = "http://XXXXXXXXXX"
-    ID = 'XXXXXX'
-    passwords = 'XXXXXX'
+    url = "http://XXXXXXXXXX"      #学校URP教务处的网址
+    ID = 'XXXXXX'                  #你的账号
+    passwords = 'XXXXXX'           #你的密码
     get_html(url)
     sleep(4)
     text = funOCR()
